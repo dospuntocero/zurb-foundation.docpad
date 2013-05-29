@@ -1,0 +1,3 @@
+[submodule "src/files/vendor/foundation"]
+	path = src/files/vendor/foundation
+	url = https://github.com/zurb/foundation.git

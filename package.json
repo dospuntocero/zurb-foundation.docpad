@@ -1,8 +1,8 @@
 {
   "name": "zurb-foundation.docpad",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Zurb Foundation skeleton for DocPad. Simple and flexible HTML, CSS, and Javascript for popular user interface components and interactions.",
-  "homepage": "https://github.com/axyz/zurb-foundation.docpad",
+  "homepage": "https://github.com/dospuntocero/zurb-foundation.docpad",
   "keywords": [
     "docpad-skeleton",
     "docpad",
@@ -10,19 +10,19 @@
     "foundation",
     "zurb foundation"
   ],
-  "author": "Andrea Moretti <axyzxp@gmail.com>",
+  "author": "Francisco Arenas <fa@dospuntocero.cl>",
   "maintainers": [
-    "Andrea Moretti <axyzxp@gmail.com>"
+    "Francisco Arenas <fa@dospuntocero.cl>"
   ],
   "contributors": [
-    "Andrea Moretti <axyzxp@gmail.com>"
+    "Francisco Arenas <fa@dospuntocero.cl>"
   ],
   "bugs": {
-    "url": "https://github.com/axyz/zurb-foundation.docpad/issues"
+    "url": "https://github.com/dospuntocero/zurb-foundation.docpad/issues"
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/axyz/zurb-foundation.docpad.git"
+    "url": "http://github.com/dospuntocero/zurb-foundation.docpad.git"
   },
   "engines": {
     "node": "0.8.x",

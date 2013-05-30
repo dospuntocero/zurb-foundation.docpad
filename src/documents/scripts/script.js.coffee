@@ -1,3 +1,2 @@
-$ ->
-  $('pre').addClass('prettyprint')
-  prettyPrint()
+jQuery ->
+	$(document).foundation()

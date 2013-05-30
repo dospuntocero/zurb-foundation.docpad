@@ -1,689 +1,652 @@
-body.antialiased
-	nav.top-bar(style='')
-		ul.title-area
-			li.name
-				h1
-					a(href='/') Foundation
-			li.toggle-topbar.menu-icon
-				a(href='#')
-					span Menu
-		section.top-bar-section
-			ul.right
-				li.divider
-				li
-					a(href='/grid.php') Features
-				li.divider
-				li
-					a(href='/templates.php') Add-ons
-				li.divider
-				li
-					a(href='/case-jacquelinewest.php') Case Studies
-				li.divider
-				li
-					a(href='/docs/') Docs
-				li.divider
-				li
-					a(href='/training.php') Training
-				li.divider
-				li.has-form
-					a.button(href='http://foundation.zurb.com/docs') Getting Started
+---
+layout: default
+title: Kitchen sink
+---
+.row
+	.large-12.columns
+		h1.docs.header
+			a(href='http://foundation.zurb.com/docs/') Foundation 4 Documentation
+		h6.docs.subheader
+			a(href='http://foundation.zurb.com/old-docs/f3') Want F3 Docs?
+		hr
+.row
+	.large-12.columns
 		.row
 			.large-12.columns
-				h1.docs.header
-					a(href='http://foundation.zurb.com/docs/') Foundation 4 Documentation
-				h6.docs.subheader
-					a(href='http://foundation.zurb.com/old-docs/f3') Want F3 Docs?
+				h2 Kitchen Sink
+				h4.subheader
+					| This page included every single Foundation element so that we can make sure things work together smoothly.
 				hr
 		.row
 			.large-12.columns
+				h4 Alert Boxes
+				.alert-box.radius(data-alert='')
+					| This is a standard alert (div.alert-box).
+					a.close(href='') ×
+				.alert-box.success(data-alert='')
+					| This is a success alert (div.alert-box.success).
+					a.close(href='') ×
+				.alert-box.alert.round(data-alert='')
+					| This is an alert (div.alert-box.alert.round).
+					a.close(href='') ×
+				.alert-box.secondary(data-alert='')
+					| This is a secondary alert (div.alert-box.secondary).
+					a.close(href='') ×
+				hr
+				h4 Block Grid
+				ul.small-block-grid-2.large-block-grid-4
+					li
+						img.th(src='http://foundation.zurb.com/docs/img/demos/demo1.jpg')
+					li
+						img.th(src='http://foundation.zurb.com/docs/img/demos/demo2.jpg')
+					li
+						img.th(src='http://foundation.zurb.com/docs/img/demos/demo3.jpg')
+					li
+						img.th(src='http://foundation.zurb.com/docs/img/demos/demo4.jpg')
+				hr
+				h4 Breadcrumbs
+				ul.breadcrumbs
+					li
+						a(href='#') Home
+					li
+						a(href='#') Features
+					li.unavailable
+						a(href='#') Gene Splicing
+					li.current
+						a(href='#') Cloning
+				hr
+				h4 Buttons
 				.row
-					.large-12.columns
-						h2 Kitchen Sink
-						h4.subheader
-							| This page included every single Foundation element so that we can make sure things work together smoothly.
-						hr
-				.row
-					.large-12.columns
-						h4 Alert Boxes
-						.alert-box.radius(data-alert='')
-							| This is a standard alert (div.alert-box).
-							a.close(href='') ×
-						.alert-box.success(data-alert='')
-							| This is a success alert (div.alert-box.success).
-							a.close(href='') ×
-						.alert-box.alert.round(data-alert='')
-							| This is an alert (div.alert-box.alert.round).
-							a.close(href='') ×
-						.alert-box.secondary(data-alert='')
-							| This is a secondary alert (div.alert-box.secondary).
-							a.close(href='') ×
-						hr
-						h4 Block Grid
-						ul.small-block-grid-2.large-block-grid-4
-							li
-								img.th(src='../img/demos/demo1.jpg')
-							li
-								img.th(src='../img/demos/demo2.jpg')
-							li
-								img.th(src='../img/demos/demo3.jpg')
-							li
-								img.th(src='../img/demos/demo4.jpg')
-						hr
-						h4 Breadcrumbs
-						ul.breadcrumbs
-							li
-								a(href='#') Home
-							li
-								a(href='#') Features
-							li.unavailable
-								a(href='#') Gene Splicing
-							li.current
-								a(href='#') Cloning
-						hr
-						h4 Buttons
-						.row
-							.small-6.large-6.columns
-								a.tiny.button(href='#') .tiny.button
-								br
-								a.small.button(href='#') .small.button
-								br
-								a.button(href='#') .button
-								br
-							.small-6.large-6.columns
-								a.tiny.button.secondary(href='#') .tiny.secondary
-								br
-								a.small.button.success.radius(href='#') .small.success.radius
-								br
-								a.button.alert.round.disabled(href='#') .round.disabled
-								br
-						hr
-						h4 Button Groups
-						ul.button-group
-							li
-								a.small.button(href='#') Button 1
-							li
-								a.small.button(href='#') Button 2
-							li
-								a.small.button(href='#') Button 3
-						ul.button-group.radius
-							li
-								a.button.secondary(href='#') Button 1
-							li
-								a.button.secondary(href='#') Button 2
-							li
-								a.button.secondary(href='#') Button 3
-							li
-								a.button.secondary(href='#') Button 4
-						ul.button-group.round.even-3
-							li
-								a.button.alert(href='#') Button 1
-							li
-								a.button.alert(href='#') Button 2
-							li
-								a.button.alert(href='#') Button 3
-						ul.button-group.round.even-3
-							li
-								input.button.success(type='submit', value='Button 1')
-							li
-								input.button.success(type='submit', value='Button 2')
-							li
-								input.button.success(type='submit', value='Button 3')
-						hr
-						h4 Dropdown Buttons
-						a.tiny.button.dropdown(href='#', data-dropdown='drop') Dropdown Button
+					.small-6.large-6.columns
+						a.tiny.button(href='#') .tiny.button
 						br
-						a.small.secondary.radius.button.dropdown(href='#', data-dropdown='drop2') Dropdown Button
+						a.small.button(href='#') .small.button
 						br
-						a.button.alert.round.dropdown(href='#', data-dropdown='drop3') Dropdown Button
+						a.button(href='#') .button
 						br
-						a.large.success.button.dropdown(href='#', data-dropdown='drop4') Dropdown Button
+					.small-6.large-6.columns
+						a.tiny.button.secondary(href='#') .tiny.secondary
 						br
-						a.large.button.dropdown.expand(href='#', data-dropdown='drop5') Dropdown Button
-						hr
-						h4 Split Buttons
-						a.tiny.button.split(href='#')
-							| Split Button
-							span(data-dropdown='drop')
+						a.small.button.success.radius(href='#') .small.success.radius
 						br
-						a.small.secondary.radius.button.split(href='#')
-							| Split Button
-							span(data-dropdown='drop2')
+						a.button.alert.round.disabled(href='#') .round.disabled
 						br
-						a.button.alert.round.split(href='#')
-							| Split Button
-							span(data-dropdown='drop3')
-						br
-						a.large.success.button.split(href='#')
-							| Split Button
-							span(data-dropdown='drop4')
-						hr
-						h4 Clearing
+				hr
+				h4 Button Groups
+				ul.button-group
+					li
+						a.small.button(href='#') Button 1
+					li
+						a.small.button(href='#') Button 2
+					li
+						a.small.button(href='#') Button 3
+				ul.button-group.radius
+					li
+						a.button.secondary(href='#') Button 1
+					li
+						a.button.secondary(href='#') Button 2
+					li
+						a.button.secondary(href='#') Button 3
+					li
+						a.button.secondary(href='#') Button 4
+				ul.button-group.round.even-3
+					li
+						a.button.alert(href='#') Button 1
+					li
+						a.button.alert(href='#') Button 2
+					li
+						a.button.alert(href='#') Button 3
+				ul.button-group.round.even-3
+					li
+						input.button.success(type='submit', value='Button 1')
+					li
+						input.button.success(type='submit', value='Button 2')
+					li
+						input.button.success(type='submit', value='Button 3')
+				hr
+				h4 Dropdown Buttons
+				a.tiny.button.dropdown(href='#', data-dropdown='drop') Dropdown Button
+				br
+				a.small.secondary.radius.button.dropdown(href='#', data-dropdown='drop2') Dropdown Button
+				br
+				a.button.alert.round.dropdown(href='#', data-dropdown='drop3') Dropdown Button
+				br
+				a.large.success.button.dropdown(href='#', data-dropdown='drop4') Dropdown Button
+				br
+				a.large.button.dropdown.expand(href='#', data-dropdown='drop5') Dropdown Button
+				hr
+				h4 Split Buttons
+				a.tiny.button.split(href='#')
+					| Split Button
+					span(data-dropdown='drop')
+				br
+				a.small.secondary.radius.button.split(href='#')
+					| Split Button
+					span(data-dropdown='drop2')
+				br
+				a.button.alert.round.split(href='#')
+					| Split Button
+					span(data-dropdown='drop3')
+				br
+				a.large.success.button.split(href='#')
+					| Split Button
+					span(data-dropdown='drop4')
+				hr
+				h4 Clearing
+				div
+					.clearing-assembled
 						div
-							.clearing-assembled
-								div
-									a.clearing-close(href='#') ×
-									.visible-img(style='display: none;')
-										img(src='//:0')
-										p.clearing-caption
-										a.clearing-main-prev(href='#')
-											span
-										a.clearing-main-next(href='#')
-											span
-									.carousel
-										ul.clearing-thumbs(data-clearing='', data-clearing-id='clearing-1369798866473-l1u72')
-											li
-												a.th(href='../img/demos/demo1.jpg')
-													img(data-caption='Nulla vitae elit libero, a pharetra augue. Cras mattis consectetur purus sit amet fermentum.', src='../img/demos/demo1-th.jpg')
-											li
-												a.th(href='../img/demos/demo2.jpg')
-													img(src='../img/demos/demo2-th.jpg')
-											li
-												a.th(href='../img/demos/demo3.jpg')
-													img(data-caption='Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.', src='../img/demos/demo3-th.jpg')
-											li
-												a.th(href='../img/demos/demo4.jpg')
-													img(src='../img/demos/demo4-th.jpg')
-											li
-												a.th(href='../img/demos/demo5.jpg')
-													img(data-caption='Integer posuere erat a ante venenatis dapibus posuere velit aliquet.', src='../img/demos/demo5-th.jpg')
-						hr
-						h4 Forms
-						form
-							fieldset
-								legend Fieldset
-								.row
-									.large-12.columns
-										label Input Label
-										input(type='text', placeholder='large-12.columns')
-								.row
-									.large-4.columns
-										label Input Label
-										input(type='text', placeholder='large-4.columns')
-									.large-4.columns
-										label Input Label
-										input(type='text', placeholder='large-4.columns')
-									.large-4.columns
+							a.clearing-close(href='#') ×
+							.visible-img(style='display: none;')
+								img(src='//:0')
+								p.clearing-caption
+								a.clearing-main-prev(href='#')
+									span
+								a.clearing-main-next(href='#')
+									span
+							.carousel
+								ul.clearing-thumbs(data-clearing='', data-clearing-id='clearing-1369798866473-l1u72')
+									li
+										a.th(href='../img/demos/demo1.jpg')
+											img(data-caption='Nulla vitae elit libero, a pharetra augue. Cras mattis consectetur purus sit amet fermentum.', src='http://foundation.zurb.com/docs/img/demos/demo1-th.jpg')
+									li
+										a.th(href='../img/demos/demo2.jpg')
+											img(src='http://foundation.zurb.com/docs/img/demos/demo2-th.jpg')
+									li
+										a.th(href='../img/demos/demo3.jpg')
+											img(data-caption='Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.', src='http://foundation.zurb.com/docs/img/demos/demo3-th.jpg')
+									li
+										a.th(href='../img/demos/demo4.jpg')
+											img(src='http://foundation.zurb.com/docs/img/demos/demo4-th.jpg')
+									li
+										a.th(href='../img/demos/demo5.jpg')
+											img(data-caption='Integer posuere erat a ante venenatis dapibus posuere velit aliquet.', src='http://foundation.zurb.com/docs/img/demos/demo5-th.jpg')
+				hr
+				h4 Forms
+				form
+					fieldset
+						legend Fieldset
+						.row
+							.large-12.columns
+								label Input Label
+								input(type='text', placeholder='large-12.columns')
+						.row
+							.large-4.columns
+								label Input Label
+								input(type='text', placeholder='large-4.columns')
+							.large-4.columns
+								label Input Label
+								input(type='text', placeholder='large-4.columns')
+							.large-4.columns
+								.row.collapse
+									label Input Label
+									.small-9.columns
+										input(type='text', placeholder='small-9.columns')
+									.small-3.columns
+										span.postfix .com
+						.row
+							.large-12.columns
+								label Textarea Label
+								textarea(placeholder='small-12.columns')
+				hr
+				h4 Custom Forms
+				form.custom
+					.row
+						.large-4.columns
+							label(for='radio1')
+								input#radio1.hidden-field(name='radio1', type='radio', style='display: none;', checked='')
+								span.custom.radio.checked
+								| Radio Button 1
+							label(for='radio1')
+								input#radio1.hidden-field(name='radio1', type='radio', style='display: none;')
+								span.custom.radio
+								| Radio Button 2
+							label(for='radio1')
+								input#radio1.hidden-field(name='radio1', type='radio', disabled='', style='display: none;')
+								span.custom.radio.disabled
+								| Radio Button 3
+						.large-4.columns
+							label(for='checkbox1')
+								input#checkbox1.hidden-field(type='checkbox', style='display: none;')
+								span.custom.checkbox
+								| Label for Checkbox
+							label(for='checkbox2')
+								input#checkbox2.hidden-field(type='checkbox', checked='', style='display: none;')
+								span.custom.checkbox.checked
+								| Label for Checkbox
+							label(for='checkbox3')
+								input#checkbox3.hidden-field(type='checkbox', checked='', style='display: none;')
+								span.custom.checkbox.checked
+								| Label for Checkbox
+						.large-4.columns
+							label(for='customDropdown1') Medium Example
+							select#customDropdown1.medium.hidden-field(data-id='1369798866488-d6IuL')
+								option(disabled='') This is a dropdown
+								option This is another option
+								option This is another option too
+								option Look, a third option
+							.custom.dropdown.medium(data-id='1369798866488-d6IuL')
+								a.current(href='#') This is another option
+								a.selector(href='#')
+								ul
+									li.disabled This is a dropdown
+									li.selected This is another option
+									li This is another option too
+									li Look, a third option
+				hr
+				h4 Dropdowns
+				a.button(href='#', data-dropdown='tinyDrop') Link Dropdown »
+				a.button(href='#', data-dropdown='contentDrop') Content Dropdown »
+				hr
+				h4 Flex Video
+				.flex-video
+					iframe(width='420', height='315', src='http://www.youtube.com/embed/0_EW8aNgKlA', frameborder='0', allowfullscreen='')
+				hr
+				h4 Inline Lists
+				ul.inline-list
+					li
+						a(href='#') Link 1
+					li
+						a(href='#') Link 2
+					li
+						a(href='#') Link 3
+					li
+						a(href='#') Link 4
+					li
+						a(href='#') Link 5
+				hr
+				h4 Joyride
+				a#start-jr.secondary.button Start Joyride
+				h5#numero1.so-awesome Build Joyride with HTML
+				p#numero2.so-awesome Stop Number 2 for You!
+				hr
+				h4 Keystroke
+				p
+					| To make something pretty, press and hold
+					kbd cmd + alt + shift + w + a + !
+				hr
+				h4 Labels
+				p
+					span.label Regular Label
+					br
+					span.radius.secondary.label Radius Secondary Label
+					br
+					span.round.alert.label Round Alert Label
+					br
+					span.success.label Success Label
+					br
+				hr
+				h4 Magellan
+				div(data-magellan-expedition='fixed')
+					dl.sub-nav
+						dd.active(data-magellan-arrival='build')
+							a(href='#build') Build with HTML
+						dd.(data-magellan-arrival='js')
+							a(href='#js') Using Javascript
+
+				h5(data-magellan-destination='build') Build With Predefined HTML Structure
+				p
+					| Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vestibulum id ligula porta felis euismod semper.
+				h5(data-magellan-destination='js') Awesome JS Goodness
+				p
+					| Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vestibulum id ligula porta felis euismod semper.
+				hr
+				h4 Orbit
+				.row
+					.large-6.columns
+						.orbit-container.orbit-stack-on-small
+							ul#featured1.orbit-slides-container(data-orbit='', data-options='timer_speed:5000;', style='margin-left: -300%; width: 500%; height: 361px;')
+								li
+									img(src='http://foundation.zurb.com/docs/img/demos/demo3.jpg')
+									.orbit-caption
+										| Caption Three. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+								li
+									img(src='http://foundation.zurb.com/docs/img/demos/demo1.jpg')
+									.orbit-caption
+										| Caption One. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+								li
+									img(src='http://foundation.zurb.com/docs/img/demos/demo2.jpg')
+									.orbit-caption
+										| Caption Two. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+								li
+									img(src='http://foundation.zurb.com/docs/img/demos/demo3.jpg')
+									.orbit-caption
+										| Caption Three. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+								li
+									img(src='http://foundation.zurb.com/docs/img/demos/demo1.jpg')
+									.orbit-caption
+										| Caption One. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+				hr
+				h4 Pagination
+				ul.pagination
+					li.arrow.unavailable
+						a(href='') «
+					li.current
+						a(href='') 1
+					li
+						a(href='') 2
+					li
+						a(href='') 3
+					li
+						a(href='') 4
+					li.unavailable
+						a(href='') …
+					li
+						a(href='') 12
+					li
+						a(href='') 13
+					li.arrow
+						a(href='') »
+				hr
+				h4 Panels
+				.row
+					.large-6.columns
+						.panel
+							h5 This is a regular panel.
+							p It has an easy to override visual style, and is appropriately subdued.
+					.large-6.columns
+						.panel.callout.radius
+							h5 This is a callout panel.
+							p It's a little ostentatious, but useful for important content.
+				hr
+				h4 Pricing Tables
+				.row
+					.large-4.columns
+						ul.pricing-table
+							li.title Standard
+							li.price $99.99
+							li.description An awesome description
+							li.bullet-item 1 Database
+							li.bullet-item 5GB Storage
+							li.bullet-item 20 Users
+							li.cta-button
+								a.button(href='#') Buy Now
+				hr
+				h4 Progress Bars
+				.progress.large-6
+					span.meter(style='width: 40%;')
+				.radius.progress.success.large-8
+					span.meter(style='width: 80%;')
+				.nice.round.progress.alert.large-10
+					span.meter(style='width: 30%;')
+				.nice.secondary.progress
+					span.meter(style='width: 50%;')
+				hr
+				h4 Reveal
+				a.radius.button(href='#', data-reveal-id='firstModal') Example Modal…
+				a.radius.button(href='#', data-reveal-id='videoModal') Example Modal w/Video…
+				hr
+				h4 Section
+				.row
+					.large-3.columns
+						.section-container.vertical-nav(data-section='vertical-nav', style='')
+							section.section
+								p.title(style='left: 0px;')
+									a(href='#') Section 1
+								.content(style='')
+									ul.side-nav
+										li
+											a(href='#') Link 1
+										li
+											a(href='#') Link 2
+										li
+											a(href='#') Link 3
+										li.divider
+										li
+											a(href='#') Link 1
+							section.section
+								p.title(style='left: 248px;')
+									a(href='#') Section 2
+								.content(style='')
+									ul.side-nav
+										li
+											a(href='#') Link 1
+										li
+											a(href='#') Link 2
+										li
+											a(href='#') Link 3
+										li.divider
+										li
+											a(href='#') Link 1
+					.large-9.columns
+						.section-container.horizontal-nav(data-section='horizontal-nav', style='height: 50px;')
+							section.section
+								p.title(style='left: 0px;')
+									a(href='#') Section 1
+								.content(style='left: -1px; top: 48px;')
+									ul.side-nav
+										li
+											a(href='#') Link 1
+										li
+											a(href='#') Link 2
+										li
+											a(href='#') Link 3
+										li.divider
+										li
+											a(href='#') Link 1
+							section.section
+								p.title(style='left: 87px;')
+									a(href='#') Section 2
+								.content(style='left: 86px; top: 48px;')
+									ul.side-nav
+										li
+											a(href='#') Link 1
+										li
+											a(href='#') Link 2
+										li
+											a(href='#') Link 3
+										li.divider
+										li
+											a(href='#') Link 1
+						.section-container.auto(data-section='', data-options='deep_linking: true;', style='')
+							section.section.active(style='padding-top: 49px;')
+								p.title(style='left: 0px;')
+									a(href='#panel1') Section 1
+								.content(data-slug='panel1', style='')
+									p
+										| Section 1. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+							section.section
+								p.title(style='left: 87px;')
+									a(href='#panel2') Section 2
+								.content(data-slug='panel2', style='')
+									p
+										| Section 2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+							.section
+								p.title(style='left: 174px;')
+									a(href='#panel3') Section 3
+								.content(data-slug='panel3', style='')
+									form
 										.row.collapse
-											label Input Label
-											.small-9.columns
-												input(type='text', placeholder='small-9.columns')
-											.small-3.columns
-												span.postfix .com
-								.row
-									.large-12.columns
-										label Textarea Label
-										textarea(placeholder='small-12.columns')
-						hr
-						h4 Custom Forms
-						form.custom
-							.row
-								.large-4.columns
-									label(for='radio1')
-										input#radio1.hidden-field(name='radio1', type='radio', style='display: none;', checked='')
-										span.custom.radio.checked
-										| Radio Button 1
-									label(for='radio1')
-										input#radio1.hidden-field(name='radio1', type='radio', style='display: none;')
-										span.custom.radio
-										| Radio Button 2
-									label(for='radio1')
-										input#radio1.hidden-field(name='radio1', type='radio', disabled='', style='display: none;')
-										span.custom.radio.disabled
-										| Radio Button 3
-								.large-4.columns
-									label(for='checkbox1')
-										input#checkbox1.hidden-field(type='checkbox', style='display: none;')
-										span.custom.checkbox
-										| Label for Checkbox
-									label(for='checkbox2')
-										input#checkbox2.hidden-field(type='checkbox', checked='', style='display: none;')
-										span.custom.checkbox.checked
-										| Label for Checkbox
-									label(for='checkbox3')
-										input#checkbox3.hidden-field(type='checkbox', checked='', style='display: none;')
-										span.custom.checkbox.checked
-										| Label for Checkbox
-								.large-4.columns
-									label(for='customDropdown1') Medium Example
-									select#customDropdown1.medium.hidden-field(data-id='1369798866488-d6IuL')
-										option(disabled='') This is a dropdown
-										option This is another option
-										option This is another option too
-										option Look, a third option
-									.custom.dropdown.medium(data-id='1369798866488-d6IuL')
-										a.current(href='#') This is another option
-										a.selector(href='#')
-										ul
-											li.disabled This is a dropdown
-											li.selected This is another option
-											li This is another option too
-											li Look, a third option
-						hr
-						h4 Dropdowns
-						a.button(href='#', data-dropdown='tinyDrop') Link Dropdown »
-						a.button(href='#', data-dropdown='contentDrop') Content Dropdown »
-						hr
-						h4 Flex Video
-						.flex-video
-							iframe(width='420', height='315', src='http://www.youtube.com/embed/0_EW8aNgKlA', frameborder='0', allowfullscreen='')
-						hr
-						h4 Inline Lists
-						ul.inline-list
-							li
+											.large-2.columns
+												label.inline Your Name
+											.large-10.columns
+												input#yourName(type='text', placeholder='Jane Smith')
+										.row.collapse
+											.large-2.columns
+												label.inline	Your Email
+											.large-10.columns
+												input#yourEmail(type='text', placeholder='jane@smithco.com')
+										label What's up?
+										textarea(rows='4')
+										button.radius.button(type='submit') Submit
+						.section-container.accordion(data-section='accordion', style='')
+							section.section
+								p.title(style='left: 0px;')
+									a(href='#panel1') Section 1
+								.content(data-slug='panel1', style='')
+									p
+										| Section 1. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+							section.section
+								p.title(style='left: 801px;')
+									a(href='#panel2') Section 2
+								.content(data-slug='panel2', style='')
+									p
+										| Section 2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+							section.section
+								p.title(style='left: 1602px;')
+									a(href='#panel3') Section 3
+								.content(data-slug='panel3', style='')
+									p
+										| Section 2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						.section-container.tabs(data-section='tabs', style='')
+							section.section.active(style='padding-top: 49px;')
+								p.title(style='left: 0px;')
+									a(href='#panel1') Section 1
+								.content(data-slug='panel1', style='')
+									p
+										| Section 1. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+							section.section
+								p.title(style='left: 87px;')
+									a(href='#panel2') Section 2
+								.content(data-slug='panel2', style='')
+									p
+										| Section 2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+							section.section
+								p.title(style='left: 174px;')
+									a(href='#panel3') Section 3
+								.content(data-slug='panel3', style='')
+									p
+										| Section 2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				hr
+				h4 Side Nav
+				.row
+					.large-4.columns.end
+						ul.side-nav
+							li.active
 								a(href='#') Link 1
 							li
 								a(href='#') Link 2
+							li.divider
 							li
 								a(href='#') Link 3
 							li
 								a(href='#') Link 4
-							li
-								a(href='#') Link 5
-						hr
-						h4 Joyride
-						a#start-jr.secondary.button Start Joyride
-						h5#numero1.so-awesome Build Joyride with HTML
-						p#numero2.so-awesome Stop Number 2 for You!
-						hr
-						h4 Keystroke
-						p
-							| To make something pretty, press and hold
-							kbd cmd + alt + shift + w + a + !
-						hr
-						h4 Labels
-						p
-							span.label Regular Label
-							br
-							span.radius.secondary.label Radius Secondary Label
-							br
-							span.round.alert.label Round Alert Label
-							br
-							span.success.label Success Label
-							br
-						hr
-						h4 Magellan
-						div(data-magellan-expedition='fixed', style='')
-							dl.sub-nav
-								dd.active(data-magellan-arrival='build')
-									a(href='#build') Build with HTML
-								dd.(data-magellan-arrival='js')
-									a(href='#js') Using Javascript
-						h5(data-magellan-destination='build') Build With Predefined HTML Structure
-						p
-							| Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vestibulum id ligula porta felis euismod semper.
-						h5(data-magellan-destination='js') Awesome JS Goodness
-						p
-							| Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vestibulum id ligula porta felis euismod semper.
-						hr
-						h4 Orbit
-						.row
-							.large-6.columns
-								.orbit-container.orbit-stack-on-small
-									ul#featured1.orbit-slides-container(data-orbit='', data-options='timer_speed:5000;', style='margin-left: -300%; width: 500%; height: 361px;')
-										li(data-orbit-slide='', style='width: 20%;')
-											img(src='../img/demos/demo3.jpg')
-											.orbit-caption
-												| Caption Three. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-										li.(style='width: 20%;')
-											img(src='../img/demos/demo1.jpg')
-											.orbit-caption
-												| Caption One. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-										li.(style='width: 20%;')
-											img(src='../img/demos/demo2.jpg')
-											.orbit-caption
-												| Caption Two. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-										li.active(style='width: 20%;')
-											img(src='../img/demos/demo3.jpg')
-											.orbit-caption
-												| Caption Three. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-										li(data-orbit-slide='', style='width: 20%;')
-											img(src='../img/demos/demo1.jpg')
-											.orbit-caption
-												| Caption One. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-									a.orbit-prev(href='#')
-										| Prev
-										span
-									a.orbit-next(href='#')
-										| Next
-										span
-									.orbit-slide-number
-										span 3
-										| of
-										span 3
-									.orbit-timer
-										span
-										.orbit-progress(style='width: 100%; -webkit-transition: width 5s linear; transition: width 5s linear;')
-								ol.orbit-bullets
-									li.(data-orbit-slide-number='1')
-									li.(data-orbit-slide-number='2')
-									li.active(data-orbit-slide-number='3')
-						hr
-						h4 Pagination
-						ul.pagination
-							li.arrow.unavailable
-								a(href='') «
-							li.current
-								a(href='') 1
-							li
-								a(href='') 2
-							li
-								a(href='') 3
-							li
-								a(href='') 4
-							li.unavailable
-								a(href='') …
-							li
-								a(href='') 12
-							li
-								a(href='') 13
-							li.arrow
-								a(href='') »
-						hr
-						h4 Panels
-						.row
-							.large-6.columns
-								.panel
-									h5 This is a regular panel.
-									p It has an easy to override visual style, and is appropriately subdued.
-							.large-6.columns
-								.panel.callout.radius
-									h5 This is a callout panel.
-									p It's a little ostentatious, but useful for important content.
-						hr
-						h4 Pricing Tables
-						.row
-							.large-4.columns
-								ul.pricing-table
-									li.title Standard
-									li.price $99.99
-									li.description An awesome description
-									li.bullet-item 1 Database
-									li.bullet-item 5GB Storage
-									li.bullet-item 20 Users
-									li.cta-button
-										a.button(href='#') Buy Now
-						hr
-						h4 Progress Bars
-						.progress.large-6
-							span.meter(style='width: 40%;')
-						.radius.progress.success.large-8
-							span.meter(style='width: 80%;')
-						.nice.round.progress.alert.large-10
-							span.meter(style='width: 30%;')
-						.nice.secondary.progress
-							span.meter(style='width: 50%;')
-						hr
-						h4 Reveal
-						a.radius.button(href='#', data-reveal-id='firstModal') Example Modal…
-						a.radius.button(href='#', data-reveal-id='videoModal') Example Modal w/Video…
-						hr
-						h4 Section
-						.row
-							.large-3.columns
-								.section-container.vertical-nav(data-section='vertical-nav', style='')
-									section.section
-										p.title(style='left: 0px;')
-											a(href='#') Section 1
-										.content(style='')
-											ul.side-nav
-												li
-													a(href='#') Link 1
-												li
-													a(href='#') Link 2
-												li
-													a(href='#') Link 3
-												li.divider
-												li
-													a(href='#') Link 1
-									section.section
-										p.title(style='left: 248px;')
-											a(href='#') Section 2
-										.content(style='')
-											ul.side-nav
-												li
-													a(href='#') Link 1
-												li
-													a(href='#') Link 2
-												li
-													a(href='#') Link 3
-												li.divider
-												li
-													a(href='#') Link 1
-							.large-9.columns
-								.section-container.horizontal-nav(data-section='horizontal-nav', style='height: 50px;')
-									section.section
-										p.title(style='left: 0px;')
-											a(href='#') Section 1
-										.content(style='left: -1px; top: 48px;')
-											ul.side-nav
-												li
-													a(href='#') Link 1
-												li
-													a(href='#') Link 2
-												li
-													a(href='#') Link 3
-												li.divider
-												li
-													a(href='#') Link 1
-									section.section
-										p.title(style='left: 87px;')
-											a(href='#') Section 2
-										.content(style='left: 86px; top: 48px;')
-											ul.side-nav
-												li
-													a(href='#') Link 1
-												li
-													a(href='#') Link 2
-												li
-													a(href='#') Link 3
-												li.divider
-												li
-													a(href='#') Link 1
-								.section-container.auto(data-section='', data-options='deep_linking: true;', style='')
-									section.section.active(style='padding-top: 49px;')
-										p.title(style='left: 0px;')
-											a(href='#panel1') Section 1
-										.content(data-slug='panel1', style='')
-											p
-												| Section 1. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-									section.section
-										p.title(style='left: 87px;')
-											a(href='#panel2') Section 2
-										.content(data-slug='panel2', style='')
-											p
-												| Section 2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-									.section
-										p.title(style='left: 174px;')
-											a(href='#panel3') Section 3
-										.content(data-slug='panel3', style='')
-											form
-												.row.collapse
-													.large-2.columns
-														label.inline Your Name
-													.large-10.columns
-														input#yourName(type='text', placeholder='Jane Smith')
-												.row.collapse
-													.large-2.columns
-														label.inline	Your Email
-													.large-10.columns
-														input#yourEmail(type='text', placeholder='jane@smithco.com')
-												label What's up?
-												textarea(rows='4')
-												button.radius.button(type='submit') Submit
-								.section-container.accordion(data-section='accordion', style='')
-									section.section
-										p.title(style='left: 0px;')
-											a(href='#panel1') Section 1
-										.content(data-slug='panel1', style='')
-											p
-												| Section 1. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-									section.section
-										p.title(style='left: 801px;')
-											a(href='#panel2') Section 2
-										.content(data-slug='panel2', style='')
-											p
-												| Section 2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-									section.section
-										p.title(style='left: 1602px;')
-											a(href='#panel3') Section 3
-										.content(data-slug='panel3', style='')
-											p
-												| Section 2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-								.section-container.tabs(data-section='tabs', style='')
-									section.section.active(style='padding-top: 49px;')
-										p.title(style='left: 0px;')
-											a(href='#panel1') Section 1
-										.content(data-slug='panel1', style='')
-											p
-												| Section 1. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-									section.section
-										p.title(style='left: 87px;')
-											a(href='#panel2') Section 2
-										.content(data-slug='panel2', style='')
-											p
-												| Section 2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-									section.section
-										p.title(style='left: 174px;')
-											a(href='#panel3') Section 3
-										.content(data-slug='panel3', style='')
-											p
-												| Section 2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-						hr
-						h4 Side Nav
-						.row
-							.large-4.columns.end
-								ul.side-nav
-									li.active
-										a(href='#') Link 1
+				hr
+				h4 Sub Nav
+				dl.sub-nav
+					dt Filter:
+					dd.active
+						a(href='#') All
+					dd
+						a(href='#') Active
+					dd
+						a(href='#') Pending
+					dd
+						a(href='#') Suspended
+				hr
+				h4 Switch
+				.small-2.switch.tiny
+					input#a(name='switch-a', type='radio', checked='')
+					label(for='a', onclick='') Off
+					input#a1(name='switch-a', type='radio')
+					label(for='a1', onclick='') On
+					span
+				.small-3.switch.small
+					input#b(name='switch-b', type='radio', checked='')
+					label(for='b', onclick='') Off
+					input#b1(name='switch-b', type='radio')
+					label(for='b1', onclick='') On
+					span
+				.small-4.switch.radius
+					input#c(name='switch-c', type='radio', checked='')
+					label(for='c', onclick='') Off
+					input#c1(name='switch-c', type='radio')
+					label(for='c1', onclick='') On
+					span
+				.small-6.switch.large.round
+					input#d(name='switch-d', type='radio', checked='')
+					label(for='d', onclick='') Off
+					input#d1(name='switch-d', type='radio')
+					label(for='d1', onclick='') On
+					span
+				hr
+				h4 Tables
+				table
+					thead
+						tr
+							th(width='200') Table Header
+							th Table Header
+							th(width='150') Table Header
+							th(width='150') Table Header
+						tr
+							td Content Goes Here
+							td This is longer content Donec id elit non mi porta gravida at eget metus.
+							td Content Goes Here
+							td Content Goes Here
+						tr
+							td Content Goes Here
+							td
+								| This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.
+							td Content Goes Here
+							td Content Goes Here
+						tr
+							td Content Goes Here
+							td
+								| This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.
+							td Content Goes Here
+							td Content Goes Here
+				hr
+				h4 Thumbnails
+				p
+					a.th(href='../img/demos/demo1.jpg')
+						img(src='http://foundation.zurb.com/docs/img/demos/demo1-th.jpg')
+				img.th(src='http://foundation.zurb.com/docs/img/demos/demo2-th.jpg')
+				hr
+				h4 Tooltips
+				p
+					| The tooltips can be positioned on the
+					span.has-tip(data-tooltip='', data-width='210', title='I\'m on bottom and the default position.') "tip-bottom"
+					| , which is the default position,
+					span.has-tip.tip-top.noradius(data-tooltip='', data-width='210', title='I\'m on the top and I\'m not rounded!') "tip-top" (hehe)
+					| ,
+					span.has-tip.tip-left(data-tooltip='left', data-width='90', title='I\'m on the left!') "tip-left"
+					| , or
+					span.has-tip.tip-right(data-tooltip='right', data-width='120', title='I\'m on the right!') "tip-right"
+					| of the target element by adding the appropriate class to them. You can even add your own custom class to style each tip differently. On a small device, the tooltips are full width and bottom aligned.
+				hr
+				h4 Top Bar
+				nav.top-bar
+					ul.title-area
+						li.name
+							h1 
+								a(href='/') Top Bar
+						li.toggle-topbar.menu-icon
+							a(href='#')
+								span Menu
+					section.top-bar-section
+						ul.left
+							li.divider
+							li.has-dropdown
+								a(href='/grid.php') Item 1
+								ul.dropdown
+									li.title.back.js-generated
+										h5
+											a(href='#') « Back
 									li
-										a(href='#') Link 2
+										label Level One
+									li
+										a(href='#') Sub-item 1
+									li
+										a(href='#') Sub-item 2
 									li.divider
 									li
-										a(href='#') Link 3
-									li
-										a(href='#') Link 4
-						hr
-						h4 Sub Nav
-						dl.sub-nav
-							dt Filter:
-							dd.active
-								a(href='#') All
-							dd
-								a(href='#') Active
-							dd
-								a(href='#') Pending
-							dd
-								a(href='#') Suspended
-						hr
-						h4 Switch
-						.small-2.switch.tiny
-							input#a(name='switch-a', type='radio', checked='')
-							label(for='a', onclick='') Off
-							input#a1(name='switch-a', type='radio')
-							label(for='a1', onclick='') On
-							span
-						.small-3.switch.small
-							input#b(name='switch-b', type='radio', checked='')
-							label(for='b', onclick='') Off
-							input#b1(name='switch-b', type='radio')
-							label(for='b1', onclick='') On
-							span
-						.small-4.switch.radius
-							input#c(name='switch-c', type='radio', checked='')
-							label(for='c', onclick='') Off
-							input#c1(name='switch-c', type='radio')
-							label(for='c1', onclick='') On
-							span
-						.small-6.switch.large.round
-							input#d(name='switch-d', type='radio', checked='')
-							label(for='d', onclick='') Off
-							input#d1(name='switch-d', type='radio')
-							label(for='d1', onclick='') On
-							span
-						hr
-						h4 Tables
-						table
-							thead
-								tr
-									th(width='200') Table Header
-									th Table Header
-									th(width='150') Table Header
-									th(width='150') Table Header
-								tr
-									td Content Goes Here
-									td This is longer content Donec id elit non mi porta gravida at eget metus.
-									td Content Goes Here
-									td Content Goes Here
-								tr
-									td Content Goes Here
-									td
-										| This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.
-									td Content Goes Here
-									td Content Goes Here
-								tr
-									td Content Goes Here
-									td
-										| This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.
-									td Content Goes Here
-									td Content Goes Here
-						hr
-						h4 Thumbnails
-						p
-							a.th(href='../img/demos/demo1.jpg')
-								img(src='../img/demos/demo1-th.jpg')
-						img.th(src='../img/demos/demo2-th.jpg')
-						hr
-						h4 Tooltips
-						p
-							| The tooltips can be positioned on the
-							span.has-tip(data-tooltip='', data-width='210', title='I\'m on bottom and the default position.') "tip-bottom"
-							| , which is the default position,
-							span.has-tip.tip-top.noradius(data-tooltip='', data-width='210', title='I\'m on the top and I\'m not rounded!') "tip-top" (hehe)
-							| ,
-							span.has-tip.tip-left(data-tooltip='left', data-width='90', title='I\'m on the left!') "tip-left"
-							| , or
-							span.has-tip.tip-right(data-tooltip='right', data-width='120', title='I\'m on the right!') "tip-right"
-							| of the target element by adding the appropriate class to them. You can even add your own custom class to style each tip differently. On a small device, the tooltips are full width and bottom aligned.
-						hr
-						h4 Top Bar
-						nav.top-bar(style='')
-							ul.title-area
-								//
-									 Title Area 
-								li.name
-									h1
-										a(href='/') Top Bar
-								//
-									 Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone 
-								li.toggle-topbar.menu-icon
-									a(href='#')
-										span Menu
-							section.top-bar-section
-								ul.left
-									li.divider
+										a(href='#') Sub-item 3
 									li.has-dropdown
-										a(href='/grid.php') Item 1
+										a(href='#') Sub-item 4
 										ul.dropdown
 											li.title.back.js-generated
 												h5
 													a(href='#') « Back
 											li
-												label Level One
-											li
-												a(href='#') Sub-item 1
-											li
-												a(href='#') Sub-item 2
-											li.divider
-											li
-												a(href='#') Sub-item 3
+												label Level Two
 											li.has-dropdown
-												a(href='#') Sub-item 4
+												a(href='#') Sub-item 1
 												ul.dropdown
 													li.title.back.js-generated
 														h5
 															a(href='#') « Back
 													li
-														label Level Two
+														label Level Three
 													li.has-dropdown
 														a(href='#') Sub-item 1
 														ul.dropdown
@@ -691,274 +654,204 @@ body.antialiased
 																h5
 																	a(href='#') « Back
 															li
-																label Level Three
-															li.has-dropdown
+																label Level Four
+															li
 																a(href='#') Sub-item 1
-																ul.dropdown
-																	li.title.back.js-generated
-																		h5
-																			a(href='#') « Back
-																	li
-																		label Level Four
-																	li
-																		a(href='#') Sub-item 1
-															li
-																a(href='#') Sub-item 2
-															li
-																a(href='#') Sub-item 3
-															li.divider
-															li
-																a(href='#') Sub-item 4
 													li
 														a(href='#') Sub-item 2
 													li
 														a(href='#') Sub-item 3
+													li.divider
 													li
 														a(href='#') Sub-item 4
 											li
-												a(href='#') Sub-item 5
-									li.divider
-								//
-									 Right Nav Section 
-								ul.right
-									li.divider.hide-for-small
+												a(href='#') Sub-item 2
+											li
+												a(href='#') Sub-item 3
+											li
+												a(href='#') Sub-item 4
 									li
-										a(href='#') Item 2
-						hr
-						h4 Type
-						h1 h1. This is a very large header.
-						h2 h2. This is a large header.
-						h3 h3. This is a medium header.
-						h4 h4. This is a moderate header.
-						h5 h5. This is a small header. h1.
-						h6 h6. This is a tiny header. h1.
-						br
-						h1.subheader h1.subheader
-						h2.subheader h2.subheader
-						h3.subheader h3.subheader
-						h4.subheader h4.subheader
-						h5.subheader h5.subheader
-						h6.subheader h6.subheader
-						br
-						ul.disc
-							li List item with a much longer description or more content.
-							li List item
+										a(href='#') Sub-item 5
+							li.divider
+						ul.right
+							li.divider.hide-for-small
 							li
-								| List item
-								ul
-									li Nested List Item
-									li Nested List Item
-									li Nested List Item
-							li List item
-							li List item
-							li List item
-						//
-							 Ordered lists are great for lists that need order, duh 
-						ol
-							li List Item 1
-							li List Item 2
-							li List Item 3
-						//
-							 Definition lists are great for small block of copy that describe the header 
-						dl
-							dt Definition List
-							dd
-								| Definition Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam id dolor id nibh ultricies vehicula ut id elit.
-						br
-						blockquote
-							| I do not fear computers. I fear the lack of them. Maecenas faucibus mollis interdum. Aenean lacinia bibendum nulla sed consectetur.
-							cite Isaac Asimov
-						br
-						ul.vcard
-							li.fn Gaius Baltar
-							li.street-address 123 Colonial Ave.
-							li.locality Caprica City
-							li
-								span.state Caprica
-								| ,
-								span.zip 12345
-							li.email
-								a(href='#') g.baltar@cmail.com
-						hr
-						h4 Visibility Classes
-						h5 Screen Size Visibility Control (Show)
-						p The following text should describe the screen size you're using:
-						p.panel
-							strong.show-for-small You are on a small screen.
-							strong.show-for-medium You are on a medium screen.
-							strong.show-for-medium-up You are on a medium, large or xlarge screen.
-							strong.show-for-medium-down You are on a medium or small screen.
-							strong.show-for-large You are on a large screen.
-							strong.show-for-large-up You are on a large or xlarge screen.
-							strong.show-for-large-down You are on a large, medium or small screen.
-							strong.show-for-xlarge You are on a xlarge screen.
-						h5 Screen Size Visibility Control (Hide)
-						p The following text should describe the screen size you aren't using:
-						p.panel
-							strong.hide-for-small
-								| You are
-								em not
-								| on a small screen.
-							strong.hide-for-medium
-								| You are
-								em not
-								| on a medium screen.
-							strong.hide-for-medium-up
-								| You are
-								em not
-								| on a medium, large or xlarge screen.
-							strong.hide-for-medium-down
-								| You are
-								em not
-								| on a medium or small screen.
-							strong.hide-for-large
-								| You are
-								em not
-								| on a large screen.
-							strong.hide-for-large-up
-								| You are
-								em not
-								| on a large or xlarge screen.
-							strong.hide-for-large-down
-								| You are
-								em not
-								| on a large, medium or small screen.
-							strong.hide-for-xlarge
-								| You are
-								em not
-								| on a xlarge screen.
-						h5 Orientation Detection
-						p The following text should describe the device orientation you're using:
-						p.panel
-							strong.show-for-landscape You are in landscape orientation.
-							strong.show-for-portrait You are in portrait orientation.
-						h5 Touch Detection
-						p The following text should describe if you're using a touch device:
-						p.panel
-							strong.show-for-touch You are on a touch-enabled device.
-							strong.hide-for-touch You are not on a touch-enabled device.
-		//
-			 Dropdowns 
-		ul#tinyDrop.f-dropdown(data-dropdown-content='')
-			li
-				a(href='#') This is a link
-			li
-				a(href='#') This is another
-			li
-				a(href='#') Yet another
-		#contentDrop.f-dropdown.content.medium(data-dropdown-content='')
-			h4 Title
-			p
-				| Some text that people will think is awesome! Some text that people will think is awesome! Some text that people will think is awesome!
-			img(src='../img/demos/demo1.jpg')
-			p More test.
-			a.button(href='#') Button
-		//
-			 Joyride 
-		ol.joyride-list(data-joyride='')
-			li(data-id='numero1', data-class='custom so-awesome', data-text='Next')
-				h4 Stop #1
-				p
-					| You can control all the details for you tour stop. Any valid HTML will work inside of Joyride.
-			li(data-id='numero2', data-button='Next')
-				h4 Stop #2
-				p Get the details right by styling Joyride with a custom stylesheet!
-			li(data-button='Next')
-				h4 Stop #3
-				p It works as a modal too!
-		//
-			 Reveal Modals 
-		#firstModal.reveal-modal
-			h2 This is a modal.
-			p
-				| Reveal makes these very easy to summon and dismiss. The close button is simply an anchor with a unicode character icon and a class of
-				code close-reveal-modal
-				| . Clicking anywhere outside the modal will also dismiss it.
-			p
-				| Finally, if your modal summons another Reveal modal, the plugin will handle that for you gracefully.
-			p
-				a.secondary.button(href='#', data-reveal-id='secondModal') Second Modal…
-			a.close-reveal-modal ×
-		#secondModal.reveal-modal
-			h2 This is a second modal.
-			p
-				| Reveal makes these very easy to summon and dismiss. The close button is simply an anchor with a unicode character icon and a class of
-				code close-reveal-modal
-				| . Clicking anywhere outside the modal will also dismiss it.
-			p
-				| Finally, if your modal summons another Reveal modal, the plugin will handle that for you gracefully.
-			a.close-reveal-modal ×
-		#videoModal.reveal-modal.large
-			h2 This modal has video
-			.flex-video
-				iframe(width='800', height='315', src='http://www.youtube.com/embed/IkOQw96cfyE', frameborder='0', allowfullscreen='')
-			a.close-reveal-modal ×
-		footer.row.full-width
-			.large-5.columns
-				h6
-					strong Made by ZURB
-				p
-					| Foundation is made by
-					a(href='http://www.zurb.com/') ZURB
-					| , a product design company in Campbell, California. We've put more than 14 years of experience building web products, services and websites into this framework.
-					a(href='http://foundation.zurb.com/about.php') Foundation Info and Goodies →
-			.large-3.columns
-				h6
-					strong Using Foundation?
-				p
-					| Let us know how you're using Foundation and we might feature you as an example!
-					a(href='mailto:foundation@zurb.com?subject=I\'m%20using%20Foundation') Get in touch →
+								a(href='#') Item 2
+				hr
+				h4 Type
+				h1 h1. This is a very large header.
+				h2 h2. This is a large header.
+				h3 h3. This is a medium header.
+				h4 h4. This is a moderate header.
+				h5 h5. This is a small header. h1.
+				h6 h6. This is a tiny header. h1.
+				br
+				h1.subheader h1.subheader
+				h2.subheader h2.subheader
+				h3.subheader h3.subheader
+				h4.subheader h4.subheader
+				h5.subheader h5.subheader
+				h6.subheader h6.subheader
+				br
+				ul.disc
+					li List item with a much longer description or more content.
+					li List item
+					li
+						| List item
+						ul
+							li Nested List Item
+							li Nested List Item
+							li Nested List Item
+					li List item
+					li List item
+					li List item
+				ol
+					li List Item 1
+					li List Item 2
+					li List Item 3
+				dl
+					dt Definition List
+					dd
+						| Definition Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam id dolor id nibh ultricies vehicula ut id elit.
+				br
+				blockquote
+					| I do not fear computers. I fear the lack of them. Maecenas faucibus mollis interdum. Aenean lacinia bibendum nulla sed consectetur.
+					cite Isaac Asimov
+				br
+				ul.vcard
+					li.fn Gaius Baltar
+					li.street-address 123 Colonial Ave.
+					li.locality Caprica City
+					li
+						span.state Caprica
+						| ,
+						span.zip 12345
+					li.email
+						a(href='#') g.baltar@cmail.com
+				hr
+				h4 Visibility Classes
+				h5 Screen Size Visibility Control (Show)
+				p The following text should describe the screen size you're using:
+				p.panel
+					strong.show-for-small You are on a small screen.
+					strong.show-for-medium You are on a medium screen.
+					strong.show-for-medium-up You are on a medium, large or xlarge screen.
+					strong.show-for-medium-down You are on a medium or small screen.
+					strong.show-for-large You are on a large screen.
+					strong.show-for-large-up You are on a large or xlarge screen.
+					strong.show-for-large-down You are on a large, medium or small screen.
+					strong.show-for-xlarge You are on a xlarge screen.
+				h5 Screen Size Visibility Control (Hide)
+				p The following text should describe the screen size you aren't using:
+				p.panel
+					strong.hide-for-small
+						| You are
+						em not
+						| on a small screen.
+					strong.hide-for-medium
+						| You are
+						em not
+						| on a medium screen.
+					strong.hide-for-medium-up
+						| You are
+						em not
+						| on a medium, large or xlarge screen.
+					strong.hide-for-medium-down
+						| You are
+						em not
+						| on a medium or small screen.
+					strong.hide-for-large
+						| You are
+						em not
+						| on a large screen.
+					strong.hide-for-large-up
+						| You are
+						em not
+						| on a large or xlarge screen.
+					strong.hide-for-large-down
+						| You are
+						em not
+						| on a large, medium or small screen.
+					strong.hide-for-xlarge
+						| You are
+						em not
+						| on a xlarge screen.
+				h5 Orientation Detection
+				p The following text should describe the device orientation you're using:
+				p.panel
+					strong.show-for-landscape You are in landscape orientation.
+					strong.show-for-portrait You are in portrait orientation.
+				h5 Touch Detection
+				p The following text should describe if you're using a touch device:
+				p.panel
+					strong.show-for-touch You are on a touch-enabled device.
+					strong.hide-for-touch You are not on a touch-enabled device.
+ul#tinyDrop.f-dropdown(data-dropdown-content='')
+	li
+		a(href='#') This is a link
+	li
+		a(href='#') This is another
+	li
+		a(href='#') Yet another
+#contentDrop.f-dropdown.content.medium(data-dropdown-content='')
+	h4 Title
+	p
+		| Some text that people will think is awesome! Some text that people will think is awesome! Some text that people will think is awesome!
+	img(src='http://foundation.zurb.com/docs/img/demos/demo1.jpg')
+	p More test.
+	a.button(href='#') Button
+ol.joyride-list(data-joyride='')
+	li(data-id='numero1', data-class='custom so-awesome', data-text='Next')
+		h4 Stop #1
+		p
+			| You can control all the details for you tour stop. Any valid HTML will work inside of Joyride.
+	li(data-id='numero2', data-button='Next')
+		h4 Stop #2
+		p Get the details right by styling Joyride with a custom stylesheet!
+	li(data-button='Next')
+		h4 Stop #3
+		p It works as a modal too!
+#firstModal.reveal-modal
+	h2 This is a modal.
+	p
+		| Reveal makes these very easy to summon and dismiss. The close button is simply an anchor with a unicode character icon and a class of
+		code close-reveal-modal
+		| . Clicking anywhere outside the modal will also dismiss it.
+	p
+		| Finally, if your modal summons another Reveal modal, the plugin will handle that for you gracefully.
+	p
+		a.secondary.button(href='#', data-reveal-id='secondModal') Second Modal…
+	a.close-reveal-modal ×
+#secondModal.reveal-modal
+	h2 This is a second modal.
+	p
+		| Reveal makes these very easy to summon and dismiss. The close button is simply an anchor with a unicode character icon and a class of
+		code close-reveal-modal
+		| . Clicking anywhere outside the modal will also dismiss it.
+	p
+		| Finally, if your modal summons another Reveal modal, the plugin will handle that for you gracefully.
+	a.close-reveal-modal ×
+#videoModal.reveal-modal.large
+	h2 This modal has video
+	.flex-video
+		iframe(width='800', height='315', src='http://www.youtube.com/embed/IkOQw96cfyE', frameborder='0', allowfullscreen='')
+	a.close-reveal-modal ×
+footer.row.full-width
+	#copyright
+		.row.full-width
 			.large-4.columns
-				h6
-					strong Need some help?
-				p
-					| For answers or help visit the
-					a(href='http://foundation.zurb.com/docs/support.html') Support page
-					| .
-		#copyright
-			.row.full-width
-				.large-4.columns
-					p Site content © 2013 ZURB, inc.
-				.large-8.columns
-					ul.inline-list.right
-						li
-							a(href='http://foundation.zurb.com') Home
-						li
-							a(href='http://foundation.zurb.com/download.php') Download
-						li
-							a(href='http://foundation.zurb.com/docs') Docs
-						li
-							a(href='http://foundation.zurb.com/docs/changelog.html') Changelog
-						li
-							a(href='http://foundation.zurb.com/about.php') About
-						li
-							a(href='http://feeds.feedburner.com/zurb/blog') Subscribe to the ZURBlog
-		script
-			// Google Analytics
-			var _gaq = _gaq || [];
-			_gaq.push(
-			['_setAccount', 'UA-2195009-2'],
-			['_trackPageview'],
-			['b._setAccount', 'UA-2195009-27'],
-			['b._trackPageview']
-			);
-			(function() {
-			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-			})();
-			document.write('<script src="http://foundation.zurb.com/docs/assets/vendor/'
-			+ ('__proto__' in {} ? 'zepto' : 'jquery')
-			+ '.js"><\\/script>');
-		script(src='http://foundation.zurb.com/docs/assets/vendor/zepto.js')
-		script(src='http://foundation.zurb.com/docs/assets/docs.js')
-		script
-			$(document)
-			.foundation();
-			// For Kitchen Sink Page
-			$('#start-jr').on('click', function() {
-			$(document).foundation('joyride','start');
-			});
-		script#hiddenlpsubmitdiv(style='display: none;')
-		script
-			try{for(var lastpass_iter=0; lastpass_iter < document.forms.length; lastpass_iter++){ var lastpass_f = document.forms[lastpass_iter]; if(typeof(lastpass_f.lpsubmitorig2)=="undefined"){ lastpass_f.lpsubmitorig2 = lastpass_f.submit; lastpass_f.submit = function(){ var form=this; var customEvent = document.createEvent("Event"); customEvent.initEvent("lpCustomEvent", true, true); var d = document.getElementById("hiddenlpsubmitdiv"); for(var i = 0; i < document.forms.length; i++){ if(document.forms[i]==form){ d.innerText=i; } } d.dispatchEvent(customEvent); form.lpsubmitorig2(); } } }}catch(e){}
+				p Site content © 2013 ZURB, inc.
+			.large-8.columns
+				ul.inline-list.right
+					li
+						a(href='http://foundation.zurb.com') Home
+					li
+						a(href='http://foundation.zurb.com/download.php') Download
+					li
+						a(href='http://foundation.zurb.com/docs') Docs
+					li
+						a(href='http://foundation.zurb.com/docs/changelog.html') Changelog
+					li
+						a(href='http://foundation.zurb.com/about.php') About
+					li
+						a(href='http://feeds.feedburner.com/zurb/blog') Subscribe to the ZURBlog
